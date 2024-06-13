@@ -1,8 +1,35 @@
-# React + Vite
+# Bookstore Application
+## Demo Live: [here](https://main--earnest-swan-62f689.netlify.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Registration and Login
+- Users must register an account before logging in.
+
+### Navbar
+- **Before Login**: Includes logo, "New Registration", and "Login" buttons.
+- **After Login**: "Logout" button replaces "New Registration" and "Login".
+
+### Book Display Page
+- Accessed after successful login.
+- Displays all books from Booksinfo array.
+
+### Book Details
+- Each book card shows:
+  - Title.
+  - Author.
+  - Price.
+  - Button to navigate to a dedicated book page.
+
+### Search Functionality
+- Users can search for books by title or author.
+
+### Book Details Page
+- Provides detailed information about each book:
+  - Image.
+  - Title.
+  - Author.
+  - Summary.
+  - Price.
+ 
