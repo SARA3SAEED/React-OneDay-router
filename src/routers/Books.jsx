@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Booksinfo from './Booksinfo';
+import NavLogout from '../components/NavLogout.jsx'
+
 
 export default function Books() {
   const [search, setSearch] = useState('');
@@ -14,6 +16,9 @@ export default function Books() {
   };
 
   return (
+    <>
+        <NavLogout></NavLogout>
+
     <div className="min-h-screen p-8">
       <h2 className="text-3xl font-bold mb-8">Books</h2>
       
@@ -41,5 +46,6 @@ export default function Books() {
         ))}
       </div>
     </div>
+    </>
   );
 }
