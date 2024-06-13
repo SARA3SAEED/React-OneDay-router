@@ -6,11 +6,7 @@ import Books from './routers/Books.jsx';
 import Login from './routers/Login.jsx';
 import Signup from './routers/Signup.jsx';
 import Bookdetails from './routers/Bookdetails.jsx'
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route,} from "react-router-dom";
 
 
 

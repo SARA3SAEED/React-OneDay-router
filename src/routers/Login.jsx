@@ -1,12 +1,19 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
-  
   const navigate = useNavigate();
-  const bookPage = ()=>{
-    navigate('/Books')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const bookPage = (event)=>{
+    event.preventDefault();
+    if (email && password) {
+      navigate('/Books');
+    } else {
+      alert('Please fill in both fields');
+    }
   }
 
 
@@ -23,13 +30,23 @@ export default function Login() {
             <label className="label">
               <span className="label-text">Email</span>
             </label>
-            <input type="email" placeholder="email" className="input input-bordered" required />
+            <input type="email" 
+            placeholder="email" 
+            className="input input-bordered" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required />
           </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input type="password" placeholder="password" className="input input-bordered" required />
+            <input type="password" 
+            placeholder="password" 
+            className="input input-bordered" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required />
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
             </label>
