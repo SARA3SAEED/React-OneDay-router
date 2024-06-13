@@ -15,15 +15,19 @@ export default function Bookdetails() {
     <>
     <NavLogout></NavLogout>
     <div className="min-h-screen p-8">
-      <h2 className="text-3xl font-bold mb-8">{book.title}</h2>
-      <div className="flex space-x-4">
-        <img src={book.img} alt={book.title} className="rounded-lg w-64" />
-        <div>
-          <p className="text-gray-600 mb-4">{book.summary}</p>
-          <p className="text-xl font-bold">${book.Price}</p>
-        </div>
-      </div>
+  <h2 className="text-3xl font-bold mb-8">{book.title}</h2>
+  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+    <img
+      src={book.img}
+      alt={book.title}
+      className="rounded-lg w-full sm:w-64"
+    />
+    <div>
+      <p className="text-gray-600 mb-4">{book.summary}</p>
+      <p className="text-xl font-bold">${book.Price}</p>
     </div>
-    </>
+  </div>
+</div>
+</>
   );
 }
